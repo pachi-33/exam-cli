@@ -26,7 +26,7 @@
 
   `pnpm` 提供了 [--filter](https://pnpm.io/filtering) 参数，可以对特定的 package 执行 `pnpm` 命令
 
-  例如给 `@diezhi/yesio` 安装 react：
+  例如给 `example` 安装 react：
 
   ```bash
   pnpm --filter example add react
