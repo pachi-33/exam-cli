@@ -5,6 +5,7 @@
  */
 
 module.exports = {
-  gitRepoUrl: '',
+  //末尾不要加斜杠
+  gitRepoUrl: 'https://github.com/pachi-33',
   cachePath: '',
 }

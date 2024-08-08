@@ -4,7 +4,7 @@ const yargs = require('yargs').scriptName('exam').usage('use: $0 <cmd> [args]')
 const cmds = require('../command')
 
 const register = () => {
-  Object.entries(cmds).forEach(([cmd, data]) => {
+  Object.entries(cmds).forEach(([cmdName, data]) => {
     yargs.command(
       data.cmd,
       data.description,
@@ -19,7 +19,7 @@ const register = () => {
 
       //handler
       (argv) => {
-        require(`../command/${cmd}`)(argv)
+        require(`../command/${cmdName}`)(argv)
       },
     )
   })
