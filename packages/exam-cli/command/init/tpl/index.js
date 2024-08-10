@@ -9,19 +9,37 @@ const downloadRepo = require('./downloadRepo')
 
 const displayLoadingAnimationTick = (isLoading) => {
   log.loading('。')
-  if (isLoading) {
-    Promise.resolve().then(() => {
+  if (isLoading.value) {
+    setImmediate(() => {
       displayLoadingAnimationTick(isLoading)
     })
   }
 }
 
 module.exports = async (args) => {
-  let isLoading = true
+  let isLoading = { value: true }
   downloadRepo('exam-cli', () => {
-    isLoading = false
+    isLoading.value = false
   })
-  Promise.resolve().then(() => {
+  setImmediate(() => {
     displayLoadingAnimationTick(isLoading)
   })
 }
+
+// const displayLoadingAnimationTick = (isLoading) => {
+//   const timer = setInterval(() => {
+//     if (isLoading.value) {
+//       console.log('。', isLoading.value)
+//     } else {
+//       timer && clearInterval(timer)
+//     }
+//   }, 200)
+// }
+
+// module.exports = async (args) => {
+//   let isLoading = { value: true }
+//   downloadRepo('exam-cli', () => {
+//     isLoading.value = false
+//   })
+//   displayLoadingAnimationTick(isLoading)
+// }
