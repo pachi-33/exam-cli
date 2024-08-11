@@ -1,0 +1,46 @@
+{
+  "files.autoSave": "onWindowChange",
+  "editor.wordWrapColumn": 120,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.printWidth": 120,
+  "prettier.quoteProps": "consistent",
+  "prettier.semi": false,
+  "prettier.singleAttributePerLine": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "fileheader.customMade": {
+    "file": "",
+    "Author": "git config user.name",
+    "Date": "Do not edit"
+  },
+  "stylelint.snippet": ["css", "less", "postcss", "scss"],
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  "stylelint.packageManager": "yarn",
+  "stylelint.customSyntax": "postcss-scss",
+  "fileheader.configObj": {
+    "createHeader": false,
+    "autoAlready": false,
+    "autoAdd": false,
+    "prohibitAutoAdd": ["json", "md", "html"],
+    "colon": " ",
+    "language": {
+      "js/ts/jsx/tsx": {
+        "head": "/**",
+        "middle": " * @",
+        "end": " */"
+      }
+    },
+    "specialOptions": {
+      "Description": "file",
+      "Date": "date",
+      "Author": "author"
+    }
+  }
+}
