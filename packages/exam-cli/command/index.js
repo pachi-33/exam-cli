@@ -9,4 +9,8 @@ module.exports = {
     cmd: ['init', 'i'],
     description: '初始化项目',
   },
+  build: {
+    cmd: ['build'],
+    description: '构建打包当前项目',
+  },
 }
