@@ -13,4 +13,8 @@ module.exports = {
     cmd: ['build'],
     description: '构建打包当前项目',
   },
+  run: {
+    cmd: ['run'],
+    description: '运行本地服务器',
+  },
 }

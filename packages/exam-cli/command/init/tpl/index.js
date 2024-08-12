@@ -7,23 +7,19 @@
 const log = require('../../../utils/log')
 const downloadRepo = require('./downloadRepo')
 
-const displayLoadingAnimationTick = (isLoading) => {
-  log.loading('。')
-  if (isLoading.value) {
-    setImmediate(() => {
-      displayLoadingAnimationTick(isLoading)
-    })
-  }
+const displayLoadingAnimationTick = () => {
+  log.loading('正在下载模版.')
 }
 
 module.exports = async (args) => {
-  let isLoading = { value: true }
-  downloadRepo('exam-cli', () => {
-    isLoading.value = false
+  let timer = null
+  downloadRepo('simple-template', () => {
+    clearInterval(timer)
+    log.info('下载完成*')
   })
-  setImmediate(() => {
-    displayLoadingAnimationTick(isLoading)
-  })
+  timer = setInterval(() => {
+    displayLoadingAnimationTick()
+  }, 1000)
 }
 
 // const displayLoadingAnimationTick = (isLoading) => {

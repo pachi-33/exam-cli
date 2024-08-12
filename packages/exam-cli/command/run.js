@@ -1,11 +1,11 @@
 /**
- * @file 构建打包
+ * @file 本地服务器
  * @author yaobao
- * @date 2024-08-10 21:47:20
+ * @date 2024-08-12 15:13:04
  */
 
 const cli = require('exam-build/src')
 
 module.exports = async () => {
-  await cli.build()
+  await cli.runServer()
 }

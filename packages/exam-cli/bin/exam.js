@@ -34,7 +34,7 @@ const __main = () => {
     register()
     // 注册帮助
     const { argv } = yargs
-    console.log('argv: ', argv)
+    // console.log('argv: ', argv)
 
     if (argv._.length === 0) {
       yargs.showHelp()

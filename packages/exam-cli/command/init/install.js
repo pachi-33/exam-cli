@@ -3,5 +3,6 @@
  * @author yaobao
  * @date 2024-08-06 23:34:50
  */
+const log = require('../../utils/log')
 
 module.exports = async (args) => {}
