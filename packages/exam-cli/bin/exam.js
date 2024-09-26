@@ -9,7 +9,7 @@ const register = () => {
       data.cmd,
       data.description,
 
-      //builder
+      //builder/
       (_yargs) => {
         const positional = data.positional || []
         positional.forEach((item) => {
